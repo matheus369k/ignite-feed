@@ -1,0 +1,135 @@
+.post {
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.post + .post {
+    margin-top: 2rem;
+}
+
+.post > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.authorInfo strong {
+    line-height: 1.6;
+    color: var(--gray-100);
+    display: block;
+}
+
+.authorInfo span, 
+.post time {
+    line-height: 1.6;
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+
+.content {
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    color: var(--gray-300);
+}
+
+.content p {
+    margin-top: 1rem;
+}
+
+.content a {
+    color: var(--green-500);
+    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    color: var(--green-300);
+}
+
+.CommentForm {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    border-top: 1px solid var(--gray-600);
+}
+
+.CommentForm strong {
+    line-height: 1.6;
+    color: var(--gray-100);
+}
+
+.CommentForm textarea {
+    background: var(--gray-900);
+    color: var(--gray-300);
+
+    border: none;
+    border-radius: 8px;
+
+    resize: none;
+
+    height: 6rem;
+    padding: 1rem;
+
+    line-height: 1.4;
+}
+
+.CommentForm:focus-within footer {
+    visibility: visible;
+    max-height: none;
+}
+
+.CommentForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.CommentForm button[type="submit"] {
+    margin-top: 1rem;
+
+    font-weight: bold;
+
+    background: var(--green-500);
+    color: var(--white);
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 1rem 1.5rem;
+
+    cursor: pointer;
+
+    transition: color 0.2s, background 0.2s;
+}
+
+.CommentForm button[type="submit"]:not(:disabled):hover {
+    background: var(--green-300);
+}
+
+.CommentForm button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.CommentList {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .post {
+        padding: 1rem;
+    }
+}
